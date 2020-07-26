@@ -7,11 +7,11 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
   height: 20px;
   width: 20px;
-  background: white;
-  margin: 3px;
+  background: #E7ECEF;
+  margin: 2px;
 
   ${props => props.on === 'true' && css`
-    animation: pixel-show .4s linear;
+    animation: pixel-show .4s ease-in-out;
   `}
 
   ${props => props.on === 'false' && css`
@@ -21,21 +21,23 @@ export const Container = styled.div<ContainerProps>`
 
   @keyframes pixel-show {
     from {
-      opacity: 0;
-      transform: scale(0.8);
+      transform: translate(-8px, -8px) scale(0.7);
     }
     to {
-      opacity: 1;
-      transform: scale(1);
+      transform: translate(0,0) scale(1);
+      
     }
   }
 
   @keyframes pixel-hide {
     from {
       opacity: 1;
+      transform: translate(0px, 0px);
     }
     to {
       opacity: 0;
+
+      transform: translate(10px, 10px);
     }
   }
 

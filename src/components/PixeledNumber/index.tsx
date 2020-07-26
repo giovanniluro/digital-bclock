@@ -3,41 +3,14 @@ import Pixel from '../Pixel';
 import { Container } from './style';
 
 interface PixeledNumberProps {
-  type: string;
+  number: number;
 }
 
-const PixeledNumber: React.FC<PixeledNumberProps> = ({ type }) => {
+const PixeledNumber: React.FC<PixeledNumberProps> = ({ number }) => {
 
   const [model, setModel] = useState<string[]>([]);
 
   useEffect(() => {
-    let formula: () => number;
-
-    switch (type) {
-      case 'segundo1':
-        formula = () => Math.floor(new Date().getSeconds() / 10);
-        break;
-      case 'segundo2':
-        formula = () => new Date().getSeconds() % 10;
-        break;
-      case 'minuto1':
-        formula = () => Math.floor(new Date().getMinutes() / 10);
-        break;
-      case 'minuto2':
-        formula = () => new Date().getMinutes() % 10;
-        break;
-      case 'hora1':
-        formula = () => Math.floor(new Date().getHours() / 10);
-        break;
-      case 'hora2':
-        formula = () => new Date().getHours() % 10;
-        break;
-      
-    }
-
-
-    setInterval(() => {
-      const number = formula();
       switch (number) {
         case 1:
           setModel([
@@ -130,9 +103,7 @@ const PixeledNumber: React.FC<PixeledNumberProps> = ({ type }) => {
           ]);
           break;
       }
-
-    }, 1000);
-  }, [model, type]);
+  }, [number]);
 
   return (
     <Container>

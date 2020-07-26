@@ -1,12 +1,18 @@
 import React from 'react';
-import { Container } from './style';
-import Clock from '../../ components/Clock';
+import { Container, Side, Content } from './style';
+import Clock from '../../components/Clock';
+import NavBar from '../../components/NavBar';
 
 const Main:React.FC = () => {
 
   return (
     <Container>
-      <Clock />
+      <Side>
+        <NavBar />
+      </Side>
+      <Content>
+        <Clock />
+      </Content>
     </Container>
   )
 
