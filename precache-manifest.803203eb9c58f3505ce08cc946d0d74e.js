@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f1f79305f4999df51c21f71d7a5a48da",
+    "revision": "76559aa1fb17231508b01c8f2299fa59",
     "url": "/digital-bclock/index.html"
   },
   {
