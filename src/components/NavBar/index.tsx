@@ -1,11 +1,12 @@
-import React, { useMemo } from 'react';
+import React, { useState } from 'react';
 import { Container, Regions } from './style';
 import { Timezone } from '../../pages/Main';
+import Button from './Button';
 
 interface NavBarProps {
   setTimezone: (timezone: Timezone) => void;
 }
- 
+
 const NavBar: React.FC<NavBarProps> = ({ setTimezone }) => {
 
   const buttons = [
@@ -155,13 +156,18 @@ const NavBar: React.FC<NavBarProps> = ({ setTimezone }) => {
     },
   ];
 
+  const [selectedButton, setSelectedButton] = useState<number>(0);
+
   return (
     <Container>
       <h1>Digital BClock</h1>
       <h3><a href="https://github.com/giovanniluro" target="#">Giovanni Luro</a></h3>
       <h2>Regiões</h2>
       <Regions>
-        {buttons.map((button, index) => <button key={index} onClick={() => setTimezone(buttons[index].fuse)}><p>{button.city}</p><span>{button.country}</span></button>)}
+        {buttons.map((button, index) =>
+          <Button index={index} current={selectedButton} key={index} onClick={() => {setTimezone(buttons[index].fuse); setSelectedButton(index)}}>
+            <p>{button.city}</p><span>{button.country}</span>
+          </Button>)}
       </Regions>
 
     </Container>

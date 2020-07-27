@@ -21,13 +21,18 @@ export const Container = styled.div`
 
   h2 {
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   a {
     text-decoration: none;
-    color: #E7ECEF;
+    color: rgba(255,159,29, 0.6);
     font-weight: normal;
+    transition: .3s;
+
+    &:hover {
+      color: rgba(255,159,29, 0.9);
+    }
   }
 
   h1:after {
@@ -36,7 +41,7 @@ export const Container = styled.div`
     bottom: -4px;
     height: 2px;
     width: 120%;
-    background: #E7ECEF;
+    background: #FF9F1C;
   }
 `;
 
