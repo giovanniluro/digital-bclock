@@ -41,6 +41,10 @@ export const Container = styled.div<ContainerProps>`
     }
   }
 
-
+  /* Primeira quebra de layout */
+  @media(max-width: 1099px) {
+    width: 15px;
+    height: 15px;
+  }
 
 `

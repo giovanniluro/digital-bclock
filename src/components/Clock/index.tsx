@@ -3,6 +3,7 @@ import PixeledNumber from '../PixeledNumber';
 import { Section, Container } from './style';
 import { addHours, addMinutes } from 'date-fns';
 import { Timezone } from '../../pages/Main';
+import Dots from './Dots';
 
 interface ClockProps {
   timezone: Timezone;
@@ -84,10 +85,12 @@ const Clock: React.FC<ClockProps> = ({ timezone }) => {
           <PixeledNumber number={hora1} />
           <PixeledNumber number={hora2} />
         </Section>
+        <Dots />
         <Section>
           <PixeledNumber number={minuto1} />
           <PixeledNumber number={minuto2} />
         </Section>
+        <Dots />
         <Section>
           <PixeledNumber number={segundo1} />
           <PixeledNumber number={segundo2} />

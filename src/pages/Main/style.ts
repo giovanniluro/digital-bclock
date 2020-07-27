@@ -22,10 +22,16 @@ export const Side = styled.aside`
   height: 100%;
   padding: 40px 20px;
 
+
+  /* Primeira quebra de layout */
+  @media(max-width: 1099px){
+    width: 50%;
+  }
+
   /* Mobile */
   @media (max-width: 700px) {
     width: 100%;
-    padding: 20px 5px;
+    padding: 0; 
   }
 
 `
@@ -37,6 +43,12 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
 
+  /* Primeira quebra de layout */
+  @media(max-width: 1099px){
+    width: 50%;
+    padding: 40px 20px;
+  }
+    
   /* Mobile */
   @media (max-width: 700px) {
     width: 100%;

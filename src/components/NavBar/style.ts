@@ -43,6 +43,12 @@ export const Container = styled.div`
     width: 120%;
     background: #FF9F1C;
   }
+
+  /* Mobile */
+  @media(max-width: 700px) {
+    padding: 10px 5px;
+    border-radius: 0;
+  }
 `;
 
 export const Regions = styled.div`
@@ -61,6 +67,11 @@ export const Regions = styled.div`
     span {
       font-size: 12px;
     }
+  }
+
+  /* Mobile */
+  @media(max-width: 700px) {
+    margin-bottom: 40px;
   }
 
 `
