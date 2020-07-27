@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/digital-bclock/precache-manifest.803203eb9c58f3505ce08cc946d0d74e.js"
+  "/digital-bclock/precache-manifest.85d578270958aa4a9a1f12ef6b0e1bad.js"
 );
 
 self.addEventListener('message', (event) => {

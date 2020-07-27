@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/digital-bclock/static/js/main.dec1244f.chunk.js",
-    "main.js.map": "/digital-bclock/static/js/main.dec1244f.chunk.js.map",
+    "main.js": "/digital-bclock/static/js/main.3a3738de.chunk.js",
+    "main.js.map": "/digital-bclock/static/js/main.3a3738de.chunk.js.map",
     "runtime-main.js": "/digital-bclock/static/js/runtime-main.39625c2e.js",
     "runtime-main.js.map": "/digital-bclock/static/js/runtime-main.39625c2e.js.map",
-    "static/js/2.f0d5ce0e.chunk.js": "/digital-bclock/static/js/2.f0d5ce0e.chunk.js",
-    "static/js/2.f0d5ce0e.chunk.js.map": "/digital-bclock/static/js/2.f0d5ce0e.chunk.js.map",
+    "static/js/2.0c4edb36.chunk.js": "/digital-bclock/static/js/2.0c4edb36.chunk.js",
+    "static/js/2.0c4edb36.chunk.js.map": "/digital-bclock/static/js/2.0c4edb36.chunk.js.map",
     "index.html": "/digital-bclock/index.html",
-    "precache-manifest.803203eb9c58f3505ce08cc946d0d74e.js": "/digital-bclock/precache-manifest.803203eb9c58f3505ce08cc946d0d74e.js",
+    "precache-manifest.85d578270958aa4a9a1f12ef6b0e1bad.js": "/digital-bclock/precache-manifest.85d578270958aa4a9a1f12ef6b0e1bad.js",
     "service-worker.js": "/digital-bclock/service-worker.js",
-    "static/js/2.f0d5ce0e.chunk.js.LICENSE.txt": "/digital-bclock/static/js/2.f0d5ce0e.chunk.js.LICENSE.txt"
+    "static/js/2.0c4edb36.chunk.js.LICENSE.txt": "/digital-bclock/static/js/2.0c4edb36.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.39625c2e.js",
-    "static/js/2.f0d5ce0e.chunk.js",
-    "static/js/main.dec1244f.chunk.js"
+    "static/js/2.0c4edb36.chunk.js",
+    "static/js/main.3a3738de.chunk.js"
   ]
 }
