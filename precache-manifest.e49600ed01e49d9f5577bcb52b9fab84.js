@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3d204b5a5bcf27f6f94849b59d1af6a2",
+    "revision": "e013d7b8bb88a93726b55ca6065ecf53",
     "url": "/digital-bclock/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/digital-bclock/static/js/2.30e3c53a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e0811fd9328459fe557b",
-    "url": "/digital-bclock/static/js/main.cc094f76.chunk.js"
+    "revision": "9b6cc10633d045a4582e",
+    "url": "/digital-bclock/static/js/main.493b6a5c.chunk.js"
   },
   {
     "revision": "63451eba052f54bb20f0",
