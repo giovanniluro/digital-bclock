@@ -4,6 +4,9 @@ export const Container = styled.div`
   height: 100%;
   width: 100%;
   color: #E7ECEF;
+  background: #24282D;
+  padding: 20px 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +44,7 @@ export const Regions = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5px;
+  grid-gap: 10px;
 
   button {
     padding: 3px;

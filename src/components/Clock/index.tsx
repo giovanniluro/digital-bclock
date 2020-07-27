@@ -1,8 +1,14 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import PixeledNumber from '../PixeledNumber';
 import { Section, Container } from './style';
+import { addHours, addMinutes } from 'date-fns';
+import { Timezone } from '../../pages/Main';
 
-const Clock: React.FC = () => {
+interface ClockProps {
+  timezone: Timezone;
+}
+
+const Clock: React.FC<ClockProps> = ({ timezone }) => {
   const [hora1, setHora1] = useState(0);
   const [hora2, setHora2] = useState(0);
   const [minuto1, setMinuto1] = useState(0);
@@ -10,6 +16,7 @@ const Clock: React.FC = () => {
   const [segundo1, setSegundo1] = useState(0);
   const [segundo2, setSegundo2] = useState(0);
   const [date, setDate] = useState('');
+  const [t, setT] = useState<number>({} as number);
 
   const switchMonth = useCallback((month: number) => {
     switch (month) {
@@ -41,8 +48,22 @@ const Clock: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    setInterval(() => {
-      const date = new Date();
+    clearInterval(t);
+
+    //Resposta imediata
+    const date = addMinutes(addHours(new Date(), timezone.hours), timezone.minutes);
+    console.log(date);
+    setSegundo1(Math.floor(date.getSeconds() / 10));
+    setMinuto1(Math.floor(date.getMinutes() / 10));
+    setHora1(Math.floor(date.getHours() / 10));
+    setSegundo2(date.getSeconds() % 10);
+    setMinuto2(date.getMinutes() % 10);
+    setHora2(date.getHours() % 10);
+    setDate(switchWeekDay(date.getDay()) + ', ' + date.getDate() + ' de ' + switchMonth(date.getMonth()) + ' de ' + date.getFullYear());
+
+    //Setando intervalo
+    setT(setInterval(() => {
+      const date = addMinutes(addHours(new Date(), timezone.hours), timezone.minutes);
       console.log(date);
       setSegundo1(Math.floor(date.getSeconds() / 10));
       setMinuto1(Math.floor(date.getMinutes() / 10));
@@ -51,8 +72,9 @@ const Clock: React.FC = () => {
       setMinuto2(date.getMinutes() % 10);
       setHora2(date.getHours() % 10);
       setDate(switchWeekDay(date.getDay()) + ', ' + date.getDate() + ' de ' + switchMonth(date.getMonth()) + ' de ' + date.getFullYear());
-    }, 1000);
-  }, [])
+    }, 1000));
+
+  }, [timezone])
 
   return (
     <Container>

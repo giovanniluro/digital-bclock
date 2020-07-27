@@ -15,11 +15,19 @@ export const Container = styled.div`
   
   > div {
     display: flex;
+    
+    /* Mobile */
+    @media (max-width: 700px) {
+      flex-direction: column;
+      align-items: center; 
+    }
   }
 
   h1 {
     color: #E7ECEF;
+    text-align: center;
     border-bottom: 10px;
+    font-size: 20px;
   }
 
 `
